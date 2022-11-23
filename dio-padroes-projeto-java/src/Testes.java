@@ -6,8 +6,9 @@ import one.digitalinnovation.gof.Strategy.ComportamentoAgressivo;
 import one.digitalinnovation.gof.Strategy.ComportamentoDefensivo;
 import one.digitalinnovation.gof.Strategy.ComportamentoNormal;
 import one.digitalinnovation.gof.Strategy.Robo;
+import one.digitalinnovation.gof.facade.Facade;
 
-public class TestSingleton {
+public class Testes {
     public static void main(String[] args) throws Exception {
         
         // Testes de Design Patterns 'Singleton': 
@@ -38,6 +39,7 @@ public class TestSingleton {
     
         Robo robo = new Robo();
         robo.setComportamento(normal);
+        System.out.println("-------------");
         robo.mover();
         robo.mover();
 
@@ -48,5 +50,11 @@ public class TestSingleton {
         robo.mover();
         robo.mover();
         robo.mover();
+
+        // Testes de Design Patterns 'Facade':
+
+        Facade facade = new Facade();
+        System.out.println("-------------");
+        facade.migrarCliente("Fábio", "23044-850");
     }
 }
